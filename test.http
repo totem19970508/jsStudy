@@ -1,0 +1,77 @@
+GET http://192.168.127.254/api/slot/0/sysInfo
+Accept: vdn.dac.v1
+Content-Type: application/json
+
+###
+
+GET http://192.168.127.254/api/slot/0/io/di
+Accept: vdn.dac.v1
+Content-Type: application/json
+
+###
+
+GET http://192.168.127.254/api/slot/0/io/relay
+Accept: vdn.dac.v1
+Content-Type: application/json
+
+###
+
+PUT http://192.168.127.254/api/slot/0/io/relay
+Accept: vdn.dac.v1
+Content-Type: application/json
+
+{
+  "slot": 0,
+  "io": {
+    "relay": [
+      {
+        "relayIndex": 0,
+        "relayMode": 0,
+        "relayStatus": 1,
+        "relayTotalCount": 1,
+        "relayCurrentCount": 1,
+        "relayCurrentCountReset": 0
+      },
+      {
+        "relayIndex": 1,
+        "relayMode": 0,
+        "relayStatus": 1,
+        "relayTotalCount": 1,
+        "relayCurrentCount": 1,
+        "relayCurrentCountReset": 0
+      },
+      {
+        "relayIndex": 2,
+        "relayMode": 0,
+        "relayStatus": 0,
+        "relayTotalCount": 3705,
+        "relayCurrentCount": 3705,
+        "relayCurrentCountReset": 0
+      },
+      {
+        "relayIndex": 3,
+        "relayMode": 0,
+        "relayStatus": 0,
+        "relayTotalCount": 1,
+        "relayCurrentCount": 1,
+        "relayCurrentCountReset": 0
+      },
+      {
+        "relayIndex": 4,
+        "relayMode": 0,
+        "relayStatus": 0,
+        "relayTotalCount": 0,
+        "relayCurrentCount": 0,
+        "relayCurrentCountReset": 0
+      },
+      {
+        "relayIndex": 5,
+        "relayMode": 0,
+        "relayStatus": 0,
+        "relayTotalCount": 1,
+        "relayCurrentCount": 1,
+        "relayCurrentCountReset": 0
+      }
+    ]
+  }
+}

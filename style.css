@@ -1,0 +1,24 @@
+body {
+    background: #dde1e7;
+}
+.box{
+    padding-top: 25px;
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+    background: #dde1e7;
+    border-radius: 10px;
+    margin: 10px;
+}
+.off{
+    box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+}
+
+.on{
+    box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.3);
+}
+
+#do_loc .box{
+    cursor: pointer;
+}
+
