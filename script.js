@@ -76,7 +76,7 @@ init();
 setInterval(async () => {
     let data = await get(DI_URL)
     let tmpArr = data.io.di.map(x => x.diStatus)
-    if (tmpArr != diArr) {
+    if (tmpArr.toString() != diArr.toString()) {
         drawDi(tmpArr)
         diArr = tmpArr
     }4
