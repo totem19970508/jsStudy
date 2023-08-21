@@ -1,5 +1,5 @@
-const DI_URL = "http://192.168.127.254/api/slot/0/io/di"
-const DO_URL = "http://192.168.127.254/api/slot/0/io/relay"
+const DI_URL = "http://10.0.1.254/api/slot/0/io/di"
+const DO_URL = "http://10.0.1.254/api/slot/0/io/relay"
 const HEADERS = {
     'Accept': 'vdn.dac.v1',
     'Content-Type': 'application/json',
@@ -11,9 +11,11 @@ let doBody;
 let dos;
 
 async function getDoArr() {
-    let data = await get(DO_URL)
-    doBody = data
-    return data.io.relay.map(x => x.relayStatus)
+    let data = await get(DO_URL);
+    console.log(data);
+    doBody = data;
+    console.log(doBody);
+    return data.io.relay.map(x => x.relayStatus);
 }
 
 async function init() {
@@ -77,6 +79,7 @@ setInterval(async () => {
     if (tmpArr != diArr) {
         drawDi(tmpArr)
         diArr = tmpArr
-    }
+    }4
 }, 1000)
 
+e4df

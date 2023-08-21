@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arrow Function Example</title>
+</head>
+<body>
+    <h1>Arrow Function Example</h1>
+    
+    <div id="output">
+        <!-- Doubled values will be displayed here -->
+    </div>
+    <div id="output1">This is the second output</div>
+
+    <script>
+        // Array of numbers
+        const numbers = [1, 2, 3, 4, 5];
+        const number2 = [200, 209, 218, 23, 24, 100];
+        // Using the arrow function to double each number in the array
+        const doubledNumbers = numbers.map(x => x * 2);
+        const celcius = number2.map(x => ((x - 32) * 5 / 9).toFixed(2));
+        
+        // Displaying the doubled numbers on the page
+        const outputDiv = document.getElementById('output');
+        outputDiv.textContent = `Doubled numbers: ${doubledNumbers.join(', ')}`;
+        
+        // Displaying the Celsius conversions on the page with two decimal places
+        const outputDiv2 = document.getElementById('output1');
+        // const celciusFormatted = celcius.map(x => x.toFixed(2));
+        // outputDiv2.textContent = `Celsius: ${celciusFormatted.join(', ')}`;
+        outputDiv2.textContent = `Celsius: ${celcius.join(', ')}`;
+    </script>
+</body>
+</html>
