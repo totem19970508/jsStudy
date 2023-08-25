@@ -1,9 +1,9 @@
 function compare(num1, num2) {
-  console.log(num1," - ", num2," : ",num1-num2);
+  console.log(num1,"-" , num2,"=",num1-num2);
   return num1 - num2;
 }
 
-var nums= [3,1,2,100, 4,200];
+var nums= [3,1,2,100, 4,200,12.4,56.1,10.8];
 
 nums.sort(compare)
 console.log(nums)

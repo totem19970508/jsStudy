@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example</title>
+</head>
+<body>
+
+<div class="box">Box 1</div>
+<div class="box">Box 2</div>
+<div class="box">Box 3</div>
+
+<script>
+    // Select elements with the class "box"
+    var elementsWithClass = document.getElementsByClassName("box");
+
+    // Add toggle functionality to each element
+    for (var i = 0; i < elementsWithClass.length; i++) {
+        elementsWithClass[i].addEventListener("click", function() {
+            if (this.dataset.originalContent) {
+                this.textContent = this.dataset.originalContent;
+                delete this.dataset.originalContent;
+            } else {
+                this.dataset.originalContent = this.textContent;
+                this.textContent = "Modified " + this.textContent;
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
+
